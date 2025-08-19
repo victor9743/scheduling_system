@@ -2,21 +2,15 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV["DB_USERNAME"] %>
-  password: <%= ENV["DB_PASSWORD"] %>
+  username: postgres
+  password: 123456
   host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
   port: <%= ENV.fetch("DB_PORT") { 5432 } %>
+  database: scheduling_db
 
 development:
   <<: *default
-  database: rede_social_db
-
 test:
   <<: *default
-  database: rede_social_db
-
 production:
   <<: *default
-  database: rede_social_db
-  username: <%= ENV["DB_USERNAME"] %>
-  password: <%= ENV["DB_PASSWORD"] %>
