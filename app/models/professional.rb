@@ -1,5 +1,6 @@
 class Professional < ApplicationRecord
   validates :name, presence: true
+  has_many :appointments
 
   enum specialty: {
     nutritionist: 0,
