@@ -57,6 +57,8 @@ class AppointmentsController < ApplicationController
   def check_business_hours(new_start, new_end)
     if new_start.saturday? || new_start.sunday? || new_start.hour < 9 || new_end.hour > 17
       return true
+    else
+      return false
     end
   end
 
