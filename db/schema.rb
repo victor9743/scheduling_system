@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_19_184340) do
 
   create_table "professionals", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "speciality", null: false
+    t.integer "specialty", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
